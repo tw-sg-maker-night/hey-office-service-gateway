@@ -18,17 +18,12 @@ module.exports.route = (event, context, callback) => {
     region: 'ap-southeast-1'
   });
 
+  const routes = {
+    book_meeting_room: 'hey-office-service-rooms-dev-rooms'
+  };
+
   const body = JSON.parse(event.body);
-  const action = body.result.action;
-
-  let handler;
-
-  switch (action) {
-    case 'book_meeting_room':
-        handler = 'hey-office-service-rooms-dev-rooms';
-      break;
-    default:
-  }
+  const handler = routes[body.result.action];
 
   if (handler) {
     lambda.invoke({
