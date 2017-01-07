@@ -46,7 +46,6 @@ module.exports.route = (event, context, callback) => {
       });
     });
   } else {
-    console.log('default response');
     const response = {
       statusCode: 200,
       body: JSON.stringify(createApiAiResponse())

@@ -1,6 +1,8 @@
 # Hey Office Service Gateway
 
-API gateway for Hey Office Service built on AWS Lambda.
+Hey Office Service webhook for API.AI built on AWS Lambda.
+
+This gateway fulfills API.AI request by routing each action to its appropriate handler.
 
 ## Using https://serverless.com/
 
